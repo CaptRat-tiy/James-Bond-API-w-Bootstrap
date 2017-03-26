@@ -1,9 +1,9 @@
 window.onload = function Bond () {
-  const characterNames = [];
-  const bio = [];
-  const isAlly = [];
-  const isBondGirl = [];
-  const movieTitle = [];
+  let characterNames = [];
+  let bio = [];
+  let isAlly = [];
+  let isBondGirl = [];
+  // let movieTitle = [];
   const url = `http://007api.co/api/characters/`
 
   var btn = document.getElementById("characters");
@@ -13,26 +13,37 @@ window.onload = function Bond () {
   $.ajax({
     url: url
   }).done(function(data) {
-    console.log('The returned object is:', data);
+    console.log('The ORIGINAL, returned object is:', data);
 
       const results = data.results;
       const resultsLength = results.length;
 
-      for (let i = 0; i < resultsLength; i++) {
-        characterNames.push(results[i].name);
-        bio.push(results[i].bio);
-        isAlly.push(results[i].ally);
-        isBondGirl.push(results[i].bond_girl);
-      }
+      isAlly = results.filter(function(element,index) {
+        console.log(element.ally)
+        if (element.ally === true) {
+          return element.name;
+        }
+      })
 
+      console.log(isAlly);
+
+      // for (let i = 0; i < resultsLength; i++) {
+      //   characterNames.push(results[i].name);
+      //   bio.push(results[i].bio);
+      //   isAlly.push(results[i].ally);
+      //   isBondGirl.push(results[i].bond_girl);
+    })
+    btn.addEventListener("click", function() {
+      document.getElementById("#characters").innerHTML = isAlly;
 // Add button to select character
 
-      // btn('#characters').addEventListener("click", function() {
-      //   alert("button pushed")
+
+
+        // javascript results.filter()
 
 
 // name variables and concat after!
-console.log(characterNames)
+// console.log(characterNames)
 
       // document.getElementById("characters").innerHTML = characterNames; // document.getElementById("bio").innerHTML = bio;
         // document.getElementById("ally").innerHTML = isAlly;
