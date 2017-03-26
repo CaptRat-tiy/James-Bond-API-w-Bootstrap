@@ -45,16 +45,16 @@
 /* MARKETING
 -------------------------------------------------- */
 
-.marketing {
+.lowerHalf {
   margin: 60px auto;
 }
 
-.marketing .col-md-4 {
+.lowerHalf .col-md-4 {
   text-align: center;
   font-size: 16px;
 }
 
-.marketing .col-md-4 .glyphicon {
+.lowerHalf .col-md-4 .glyphicon {
   font-size: 60px;
   background-color: #EAEAEA;
   border-radius: 50%;
