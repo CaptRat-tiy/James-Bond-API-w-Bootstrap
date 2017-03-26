@@ -19,11 +19,11 @@ window.onload = function Bond () {
       const resultsLength = results.length;
 
       isAlly = results.filter(function(element,index) {
-        console.log(element.ally)
-        if (element.ally === true) {
-          return element.name;
-        }
-      })
+         return element.ally;
+       })
+        if (isAlly.ally === true) {
+          console.log(isAlly);
+      }
 
       console.log(isAlly);
 
