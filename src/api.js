@@ -3,12 +3,9 @@ window.onload = function Bond () {
   let bio = [];
   let isAlly = [];
   let isBondGirl = [];
-  // let movieTitle = [];
   const url = `http://007api.co/api/characters/`
 
   var btn = document.getElementById("button");
-
-
 
   $.ajax({
     url: url

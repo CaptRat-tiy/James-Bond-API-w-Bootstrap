@@ -34,27 +34,37 @@
 
       <div id="my-slider" class="carousel slide" data-ride="carousel">
 
-        <!-- wrapper for slides -->
+      <!-- wrapper for slides -->
 
-        <div class="carousel-inner" role="listbox">
-          <div class="item active"> <!--opening slide -->
-            <img src="../images/landscapegif.gif" alt="iconic 007 gunbarrel"/>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active"> <!--opening slide -->
+          <img src="../images/classic.gif" alt="iconic 007 gunbarrel"/>
+        </div>
+        <div class="item">
+          <img src="../images/007silhouette.jpg" alt="007silhouette"/>
+            <div class="carousel-caption">
+              <br>
+              <br>
+              <p>British Bad Ass</p>
+            </div>
           </div>
           <div class="item">
-            <img src="../images/007silhouette.jpg" alt="007silhouette"/>
-              <div class="carousel-caption">
-                <h1>British</h1>
-                <p>Bad Ass</p>
-              </div>
-            </div>
-            <div class="item">
-              <img src="../images/bondgirls/goldeneye.jpg" alt="woman spray painted gold">
-              <div class="carousel-caption">
-                <p>Debonnair</p>
-              </div>
+            <img src="../images/bondgirls/goldeneye.jpg" alt="woman spray painted gold">
+            <div class="carousel-caption">
+              <!-- <p>Debonnair</p> -->
             </div>
           </div>
         </div>
+      </div>
+
+      <!--Indicators ("dot nav")-->
+
+      <ol class="carousel-indicators">
+        <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#my-slider" data-slide-to="1"></li>
+        <li data-target="#my-slider" data-slide-to="2"></li>
+      </ol>
+
 <!-- controls / Next-Prev buttons -->
     <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -66,13 +76,7 @@
     </a>
   </div>
 
-  <!-- Indicators ("dot nav")-->
 
-  <ol class="carousel-indicators">
-    <li data-target="#my-slider" data-slide-to="0" class="active"></li>
-    <li data-target="#my-slider" data-slide-to="1"></li>
-    <li data-target="#my-slider" data-slide-to="2"></li>
-  </ol>
 
   <div class="dropdown">
     <button class="btn btn-primary" id="button" type="button">REVEAL James Bond's trusted ally:
