@@ -21,10 +21,12 @@ window.onload = function Bond () {
 
       isAlly = results.filter(function(element,index) {
          return element.ally})
-        //  console.log(isAlly[0].name)
-      //
- document.getElementById("character").innerHTML= isAlly[0].name;
+         bio = results.filter(function(element,index) {
+            return element.bio})
 
+ document.getElementById("character").innerHTML= isAlly[0].name;
+ document.getElementById("bio").innerHTML= isAlly[0].bio;
+ document.getElementById("ally").src = "../images/allies/Valentine.jpeg";
 
 
       // btn.addEventListener("click", function() {
