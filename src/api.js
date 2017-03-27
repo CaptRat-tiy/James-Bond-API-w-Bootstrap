@@ -6,7 +6,7 @@ window.onload = function Bond () {
   // let movieTitle = [];
   const url = `http://007api.co/api/characters/`
 
-  var btn = document.getElementById("characters");
+  var btn = document.getElementById("button");
 
 
 
@@ -15,17 +15,20 @@ window.onload = function Bond () {
   }).done(function(data) {
     console.log('The ORIGINAL, returned object is:', data);
 
-      const results = data.results;
-      const resultsLength = results.length;
+  btn.addEventListener("click", function() {
+
+      let results = data.results;
 
       isAlly = results.filter(function(element,index) {
-         return element.ally;
-       })
-        if (isAlly.ally === true) {
-          console.log(isAlly);
-      }
+         return element.ally})
+        //  console.log(isAlly[0].name)
+      //
+ document.getElementById("character").innerHTML= isAlly[0].name;
 
-      console.log(isAlly);
+
+
+      // btn.addEventListener("click", function() {
+
 
       // for (let i = 0; i < resultsLength; i++) {
       //   characterNames.push(results[i].name);
@@ -33,8 +36,7 @@ window.onload = function Bond () {
       //   isAlly.push(results[i].ally);
       //   isBondGirl.push(results[i].bond_girl);
     })
-    btn.addEventListener("click", function() {
-      document.getElementById("#characters").innerHTML = isAlly;
+
 // Add button to select character
 
 
@@ -53,5 +55,5 @@ window.onload = function Bond () {
         //   document.innerHTML += "The character " + (document.getElementById('names').innerHTML = characterNames[i])  + "Bio: " + (document.getElementById('bio').innerHTML =bio[i]) +" is James Bond's good friend.  Right? " + (document.getElementById('ally').innerHTML = isAlly[i]) + "!  Since Sean Connory rocked the 007 role, these women " + (document.getElementById('bondgirl').innerHTML = isBondGirl[i]) + " became the eye-candy necessary to keep us watching, until Daniel Craig, again, stirred the role!"
         // }
 
-    })
-  }
+  })
+}
