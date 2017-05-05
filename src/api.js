@@ -10,16 +10,21 @@ window.onload = function Bond () {
   $.ajax({
     url: url
   }).done(function(data) {
-    console.log('The ORIGINAL, returned object is:', data);
+    // console.log('The ORIGINAL, returned object is:', data);
 
   btn.addEventListener("click", function() {
 
       let results = data.results;
+        // console.log(results);
 
       isAlly = results.filter(function(element,index) {
-         return element.ally})
+         return element.ally;
+       })
+
          bio = results.filter(function(element,index) {
-            return element.bio})
+            return element.bio;
+          })
+          console.log('this is a test');
 
  document.getElementById("character").innerHTML= isAlly[0].name;
  document.getElementById("bio").innerHTML= isAlly[0].bio;
