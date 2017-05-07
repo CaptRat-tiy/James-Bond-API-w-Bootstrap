@@ -1,5 +1,6 @@
 This template is from a "build a personal portfolio" Bootstrap tutorial, with the James Bond assignment added in.
 
+Moved index.html out of SRC folder
 
 Unfortunately, as of May 5 (at least), the 007api.co site is offline! : (
 Modifying the jQuery call to https doesn't work, as the entire database is offline.
