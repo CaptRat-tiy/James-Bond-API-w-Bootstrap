@@ -3,7 +3,7 @@ window.onload = function Bond () {
   let bio = [];
   let isAlly = [];
   let isBondGirl = [];
-  const url = `http://007api.co/api/characters/`
+  const url = `https://007api.co/api/characters/`
 
   var btn = document.getElementById("button");
 
